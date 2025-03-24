@@ -1,7 +1,7 @@
 # Kaboose-App-Face-Recognition-System-for-User-Verification-Built-on-Homomorphic-Encryption
-https://github.com/DhruvMenon2003/Kaboose-App-Face-Recognition-System-for-User-Verification-Built-on-Homomorphic-Encryption/blob/main/Kaboose%20verification%20user%20flow.mp4
-https://github.com/DhruvMenon2003/Kaboose-App-Face-Recognition-System-for-User-Verification-Built-on-Homomorphic-Encryption/blob/main/Homomoprhic%20Encryption%20Data%20Flow.png
+
 ## What is the idea of homomorphic encryption?
+![Homomoprhic Encryption Data Flow](https://github.com/user-attachments/assets/0cb21653-b2cc-432b-adb5-bd2bb10e8837)
 
 ### Perform any operation on encrypted data without decrypting.
 ## Encryption Algorithm used : CKKS
