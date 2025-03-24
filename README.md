@@ -1,4 +1,6 @@
 # Kaboose-App-Face-Recognition-System-for-User-Verification-Built-on-Homomorphic-Encryption
+https://github.com/DhruvMenon2003/Kaboose-App-Face-Recognition-System-for-User-Verification-Built-on-Homomorphic-Encryption/blob/main/Kaboose%20verification%20user%20flow.mp4
+https://github.com/DhruvMenon2003/Kaboose-App-Face-Recognition-System-for-User-Verification-Built-on-Homomorphic-Encryption/blob/main/Homomoprhic%20Encryption%20Data%20Flow.png
 ## What is the idea of homomorphic encryption?
 
 ### Perform any operation on encrypted data without decrypting.
