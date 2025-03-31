@@ -1,22 +1,89 @@
-# Kaboose-App-Face-Recognition-System-for-User-Verification-Built-on-Homomorphic-Encryption
+# Kaboose Verification App
 
+A facial recognition verification application for mobile websites that uses homomorphic encryption for secure user verification.
 
-https://github.com/user-attachments/assets/4eb758be-8175-446c-92d4-95286d57ad0c
-
-
-## What is the idea of homomorphic encryption?
-![Homomoprhic Encryption Data Flow](https://github.com/user-attachments/assets/0cb21653-b2cc-432b-adb5-bd2bb10e8837)
-
-### Perform any operation on encrypted data without decrypting.
-## Encryption Algorithm used : CKKS
-
-### CKKS has been an essential tool in enabling privacy-preserving computations, especially in fields like data analysis, machine learning, and medical research, where the need to perform computations on sensitive data is common. It offers a way to do this without compromising the privacy of the underlying data.
-## How it works?
-
-### Finds Euclidean Distance between encrypted image embeddings . If comparison is successful(no matches with existing data) it goes to the Facenet AI model for verification after which it is deleted. If comparison is unsuccessful(matches with existing data), the image is directly deleted.
 ## Features
 
-   ### ->  The Cloud Database provides the resources for the computationally intensive operations like Euclidean Distance calculations
-   ### -> Protects sensitive data in cloud against cyberattacks by adding noise to during encryption.
+- **Image Upload**: Users can upload their image for verification
+- **Facial Recognition**: Uses DeepFace AI for facial recognition
+- **Homomorphic Encryption**: Securely encrypts facial embeddings using CKKS algorithm
+- **Real-time Verification**: Stream verification using webcam
+- **Secure Storage**: All images are encrypted and securely stored
 
-   
+## Setup Instructions
+
+### Prerequisites
+
+- Python 3.7+ installed
+- Node.js and npm (optional, for development)
+
+### Local Installation
+
+1. Clone or download this repository
+
+2. Install Python dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+
+3. Start the Python backend server:
+   ```
+   python verify.py
+   ```
+
+4. In a separate terminal, start the frontend server:
+   ```
+   python -m http.server 8000
+   ```
+
+5. Open your browser and navigate to:
+   ```
+   http://localhost:8000
+   ```
+
+## Deployment
+
+For detailed deployment instructions, see the [DEPLOYMENT.md](DEPLOYMENT.md) file.
+
+### Quick Deployment
+
+#### Backend Deployment (Heroku)
+
+1. Make sure you have the Heroku CLI installed
+2. Run the deployment script:
+   ```
+   bash deploy-backend.sh your-app-name
+   ```
+3. Note the URL of your deployed backend
+
+#### Frontend Deployment (Netlify)
+
+1. Make sure you have the Netlify CLI installed
+2. Run the deployment script with your backend URL:
+   ```
+   node deploy-frontend.js https://your-backend-url.com
+   ```
+
+## How It Works
+
+1. **Image Upload**: When a user uploads their image, it's processed by DeepFace to extract facial embeddings.
+
+2. **Homomorphic Encryption**: The embeddings are encrypted using the CKKS algorithm, allowing computations on the encrypted data without decryption.
+
+3. **Verification**: The system compares the encrypted embeddings with previously stored embeddings to ensure the user doesn't have multiple accounts.
+
+4. **Stream Verification**: The webcam captures the user's face in real-time and verifies it against their uploaded image.
+
+## Security Features
+
+- All facial embeddings are homomorphically encrypted
+- Images are deleted after processing
+- Encryption keys are securely managed
+- No plaintext sensitive data is stored
+
+## Technologies Used
+
+- **Frontend**: HTML, CSS, JavaScript
+- **Backend**: Python, Flask
+- **Facial Recognition**: DeepFace
+- **Encryption**: TenSEAL (CKKS homomorphic encryption)

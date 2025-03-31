@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaboose Verification App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Configuration script must be loaded before app.js -->
+    <script src="config.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header with Kaboose Logo -->
+        <div class="app-header">
+            <img src="assets/kabooselogo.png" alt="Kaboose Logo" class="logo">
+            <h1>Kaboose Verification</h1>
+        </div>
+        <!-- Loading Screen with Animation -->
+        <div class="screen" id="initial-screen">
+            <div class="device-frame">
+                <div class="content-area">
+                    <div class="loading-animation">
+                        <video id="loading-video" autoplay muted>
+                            <source src="assets/vecteezy_cybersecurity-animation-footage-depicted-with-shield-and-cctv_48713365.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div class="screen-label">Loading...</div>
+        </div>
+
+        <!-- Image Upload Screen -->
+        <div class="screen" id="image-upload-screen">
+            <div class="device-frame">
+                <div class="content-area">
+                    <div class="image-placeholder">
+                        <img src="assets/image-icon.svg" alt="Image Icon" id="image-icon">
+                    </div>
+                    <div class="device-button"></div>
+                </div>
+            </div>
+            <div class="screen-label">This is me!</div>
+        </div>
+
+        <!-- Video Capture Screen -->
+        <div class="screen" id="video-capture-screen">
+            <div class="device-frame">
+                <div class="content-area">
+                    <div class="video-placeholder">
+                        <img src="assets/video-icon.svg" alt="Video Icon" id="video-icon">
+                    </div>
+                    <div class="device-button"></div>
+                </div>
+            </div>
+            <div class="screen-label">This is you!</div>
+            <div class="back-button">
+                <img src="assets/back-icon.svg" alt="Back" id="back-icon">
+            </div>
+        </div>
+
+        <!-- Verification Failed Screen -->
+        <div class="screen" id="verification-failed-screen">
+            <div class="device-frame">
+                <div class="content-area">
+                    <div class="video-placeholder">
+                        <div class="crossed-video">
+                            <img src="assets/video-icon.svg" alt="Video Icon" class="video-icon-crossed">
+                            <div class="cross-line"></div>
+                        </div>
+                    </div>
+                    <div class="device-button"></div>
+                </div>
+            </div>
+            <div class="screen-label">Not you!</div>
+            <div class="retry-button">
+                <img src="assets/retry-icon.svg" alt="Retry" id="retry-icon">
+            </div>
+        </div>
+
+        <!-- Cat Verification Screen -->
+        <div class="screen" id="cat-verification-screen">
+            <div class="device-frame">
+                <div class="content-area">
+                    <div class="image-placeholder">
+                        <img src="assets/cat-icon.svg" alt="Cat Icon" id="cat-icon">
+                    </div>
+                    <div class="device-button"></div>
+                </div>
+            </div>
+            <div class="screen-label">This is me!</div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

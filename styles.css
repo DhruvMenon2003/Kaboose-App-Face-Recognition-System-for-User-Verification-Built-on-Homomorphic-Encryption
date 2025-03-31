@@ -1,0 +1,204 @@
+/* Main Styles for Kaboose Verification App */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.app-header .logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.app-header h1 {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.app-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 700px;
+    background-color: #5cbfbf; /* Teal background color from mockups */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    display: none; /* Hide all screens by default */
+}
+
+/* Show initial screen by default */
+#initial-screen {
+    display: flex;
+}
+
+.device-frame {
+    width: 80%;
+    height: 60%;
+    background-color: #fff;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border: 8px solid #777;
+    overflow: hidden;
+}
+
+.content-area {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.image-placeholder, .video-placeholder, .loading-animation {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-animation {
+    width: 100%;
+    height: 100%;
+}
+
+#loading-video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#image-icon, #video-icon, #cat-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.device-button {
+    width: 15px;
+    height: 15px;
+    background-color: #777;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.screen-label {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000;
+    margin-top: 30px;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.back-button, .retry-button {
+    margin-top: 20px;
+}
+
+#back-icon, #retry-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.crossed-video {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-icon-crossed {
+    width: 60px;
+    height: 60px;
+}
+
+.cross-line {
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background-color: red;
+    transform: rotate(45deg);
+}
+
+.cross-line::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background-color: red;
+    transform: rotate(90deg);
+}
+
+/* Camera switch button styles */
+.camera-switch-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.camera-switch-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 480px) {
+    .app-container {
+        height: 100vh;
+        max-width: 100%;
+        border-radius: 0;
+    }
+}
